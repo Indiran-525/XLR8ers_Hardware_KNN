@@ -3,7 +3,6 @@
 
 ![Platform](https://img.shields.io/badge/Platform-ZedBoard%20(Zynq--7000)-blue)
 ![Language](https://img.shields.io/badge/Language-Verilog-orange)
-![Latency](https://img.shields.io/badge/Latency-0.53%C2%B5s-brightgreen)
 ![Architecture](https://img.shields.io/badge/Architecture-Single--Cycle%20Streaming-blueviolet)
 
 This repository contains the RTL implementation of a **K-Nearest Neighbors (KNN)** hardware accelerator for the **Avnet ZedBoard**. The design features a high-performance **single-cycle streaming datapath** that processes one training point every clock cycle, achieving near-zero latency overhead for Edge AI classification.
@@ -40,15 +39,15 @@ The design utilizes a **Streaming Iterative Architecture** rather than a deep pi
 
 | Metric | Value | Notes |
 | :--- | :--- | :--- |
-| **Clock Frequency** | 125 MHz | (Period: 8.00 ns) |
+| **Clock Frequency** | 100 MHz | (Period: 10.00 ns) |
 | **Throughput** | 1 Point / Cycle | Streaming Processing |
-| **Total Latency** | **66 Cycles** | ~528 ns total execution time |
+| **Total Latency** | **34 Cycles** | ~340 ns total execution time |
 | **Critical Path** | ROM $\to$ Dist $\to$ Sort | Fits within 8ns (Positive Slack) |
 
 *By executing the entire `Fetch -> Calc -> Sort` chain in a single cycle, the design minimizes register overhead and latency.*
 
 ## 🛠️ Tools & Hardware
-* **Hardware:** Avnet ZedBoard (Xilinx Zynq-7000 SoC - XC7Z020)
+* **Hardware:** ZedBoard (Xilinx Zynq-7000 SoC - XC7Z020)
 * **EDA Tool:** Xilinx Vivado Design Suite
 * **Language:** Verilog HDL
 * **Key IO:**
@@ -56,20 +55,5 @@ The design utilizes a **Streaming Iterative Architecture** rather than a deep pi
     * **BTN:** Reset
     * **LEDs:** Output Class & Done Flag
 
-## 📂 Repository Structure
-
-```text
-Hardware_KNN/
-├── src/
-│   ├── knn_d2s.v              # Top Module (Streaming Controller)
-│   ├── distance_engine.v      # Combinational Math Unit
-│   ├── best_k_sorter.v        # Parallel Sorting Registers
-│   ├── even_odd_best_dist.v   # Sorting Helper Logic
-│   ├── majority_voter.v       # Decision Logic
-│   └── rom.mem                # Training Dataset (Hex)
-├── sim/
-│   ├── tb_knn_d2s.v           # Behavioral Testbench
-│   └── dataset_gen.py         # Script to generate rom.mem
-├── constraints/
 │   └── zedboard.xdc           # Physical constraints
 └── docs/
