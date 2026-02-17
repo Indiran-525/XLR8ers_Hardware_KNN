@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "D:/Vivado/2025.1/Vivado/data/rsb/busdef" \
+"../../../../knn_d2s.srcs/sources_1/new/best_k_sorter.v" \
+"../../../../knn_d2s.srcs/sources_1/new/distance_engine.v" \
+"../../../../knn_d2s.srcs/sources_1/new/even_odd_best_dist.v" \
+"../../../../knn_d2s.srcs/sources_1/new/knn_d2s.v" \
+"../../../../knn_d2s.srcs/sources_1/new/majority_voter.v" \
+"../../../../knn_d2s.srcs/sim_1/new/knn_d2s_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

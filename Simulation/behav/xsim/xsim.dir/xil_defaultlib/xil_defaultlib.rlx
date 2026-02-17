@@ -1,0 +1,11 @@
+0.7
+2020.2
+May 22 2025
+00:13:55
+C:/Users/bozzc/knn_d2s/knn_d2s.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,,,,,,,
+C:/Users/bozzc/knn_d2s/knn_d2s.srcs/sim_1/new/knn_d2s_tb.v,1771296175,verilog,,,,tb_distance_engine,,,D:/Vivado/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/bozzc/knn_d2s/knn_d2s.srcs/sources_1/new/best_k_sorter.v,1771268696,verilog,,C:/Users/bozzc/knn_d2s/knn_d2s.srcs/sources_1/new/distance_engine.v,,top_k_sorter,,,D:/Vivado/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/bozzc/knn_d2s/knn_d2s.srcs/sources_1/new/distance_engine.v,1771295986,verilog,,C:/Users/bozzc/knn_d2s/knn_d2s.srcs/sources_1/new/even_odd_best_dist.v,,distance_engine_2d,,,D:/Vivado/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/bozzc/knn_d2s/knn_d2s.srcs/sources_1/new/even_odd_best_dist.v,1771293235,verilog,,C:/Users/bozzc/knn_d2s/knn_d2s.srcs/sources_1/new/knn_d2s.v,,final_merge_sort,,,D:/Vivado/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/bozzc/knn_d2s/knn_d2s.srcs/sources_1/new/knn_d2s.v,1771304148,verilog,,C:/Users/bozzc/knn_d2s/knn_d2s.srcs/sources_1/new/majority_voter.v,,knn_d2s,,,D:/Vivado/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/bozzc/knn_d2s/knn_d2s.srcs/sources_1/new/majority_voter.v,1771292473,verilog,,C:/Users/bozzc/knn_d2s/knn_d2s.srcs/sim_1/new/knn_d2s_tb.v,,majority_voter,,,D:/Vivado/2025.1/Vivado/data/rsb/busdef,,,,,
